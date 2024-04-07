@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script defer src="script.js"></script>
+    <title>Nad Roklemi</title>
 </head>
 
 <body>
@@ -14,15 +15,15 @@
 
         <label for="jmeno">Jméno:</label><br>
         <input type="text" id="jmeno" name="jmeno" required><br>
-        
+
         <label for="email">Email:</label><br>
         <input type="email" id="email" name="email" required><br>
-        
+
         <label for="telefon">Telefon:</label><br>
         <input type="tel" id="telefon" name="telefon" required><br>
-        
+
         <label for="pokoje">Vyberte pokoj:</label><br>
-        <select id="pokoje" name="pokoje" multiple required>
+        <select id="pokoje" name="pokoje[]" multiple required>
             <option value="pokoj1">Pokoj 1</option>
             <option value="pokoj2">Pokoj 2</option>
             <option value="pokoj3">Pokoj 3</option>
@@ -30,19 +31,26 @@
             <option value="pokoj5">Pokoj 5</option>
         </select><br>
 
-        <label for="od-kdy">od kdy:</label><br>
+        <label for="od_kdy">od kdy:</label><br>
         <input type="date" name="od_kdy" id="od_kdy"><br>
-        
-        <label for="do-kdy">do kdy:</label><br>
+
+        <label for="do_kdy">do kdy:</label><br>
         <input type="date" name="do_kdy" id="do_kdy"><br>
-        
+
         <label for="pristylka">Přistýlka:</label><br>
-        <select id="pristylka" name="pristylka">
-            <option value="ne">Bez přistýlky</option>
-            <option value="ano">S přistýlkou (+50 Kč)</option>
+        <select id="pristylka" name="pristylka[]" multiple>
+            <option value="bez">Bez přistýlky</option>
+            <option value="pro_pokoj1">Pro pokoj 1</option>
+            <option value="pro_pokoj2">Pro pokoj 2</option>
+            <option value="pro_pokoj3">Pro pokoj 3</option>
+            <option value="pro_pokoj4">Pro pokoj 4</option>
+            <option value="pro_pokoj5">Pro pokoj 5</option>
         </select><br><br>
-        <input type="submit" value="Potvrdit rezervaci">
+
+        <input type="submit" value="submit" id="submit">
+
     </form>
+
     <p>Cena 500,- je za dvoulůžkový pokoj bez ohledu na obsazenost lůžek.</p>
     <p>Po dohodě možno i s přistýlkou za jednorázový poplatek 50 Kč za povlečení.</p>
     <p>Rezervaci termínu je nutno potvrdit do 7 dnů zaplacením zálohy ve výši 20%.</p>
